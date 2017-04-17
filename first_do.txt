@@ -1,0 +1,21 @@
+1) __UPDATES__
+   sudo apt-get update
+   sudo apt-get upgrade
+
+2) __RESTRICTED EXTRAS__
+   sudo apt-get install ubuntu-restricted-extras
+
+3) __VLC PLAYER__
+   sudo apt-get install vlc
+   __To install VLC Mozilla plugin:
+   sudo apt-get install mozilla-plugin-vlc
+
+4) __JAVA ORACLE 8
+   sudo add-apt-repository ppa:webupd8team/java
+   sudo apt-get update
+   sudo apt-get install oracle-java8-installer
+
+5) __UNITY TWEAK__
+   sudo apt-get install unity-tweak-tool
+
+

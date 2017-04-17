@@ -1,0 +1,6 @@
+1) __SIMPLE SCREEN RECORDER__
+	sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+	sudo apt-get update
+	sudo apt-get install simplescreenrecorder
+
+2) 
