@@ -1,4 +1,4 @@
-package com.selenium.demo;
+package com.selenium.learn;
 
 import org.junit.After;
 import org.junit.Before;
