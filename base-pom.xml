@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>MavenSimple</groupId>
+	<artifactId>MavenSimple-01</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>My First Maven Simple</name>
+	<description>I like to keep it simple</description>
+
+	<developers>
+		<developer>
+			<name>Ruthra Ved</name>
+			<email>ruthraved@gmail.com</email>
+		</developer>
+	</developers>
+
+
+	<properties>
+		<suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
+	</properties>
+
+	<dependencies>
+
+		<!-- Junit 4 -->
+		<!-- https://github.com/junit-team/junit4/wiki/Use-with-Maven -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- TestNG -->
+		<!-- https://testng.org/doc/maven.html -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- Selenium -->
+		<!-- https://www.selenium.dev/maven/ -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+
+		<!-- Apache POI -->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+
+
+		<!-- Cucumber-JVM -->
+		<!-- https://cucumber.io/docs/installation/java/ -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>6.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- Cucumber Junit-->
+		<!-- https://cucumber.io/docs/cucumber/api/#junit -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>6.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Maven Deploy Plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-deploy-plugin</artifactId>
+			<version>3.0.0-M1</version>
+			<type>maven-plugin</type>
+		</dependency>
+
+		<!-- Maven Install Plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-install-plugin</artifactId>
+			<version>3.0.0-M1</version>
+			<type>maven-plugin</type>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<pluginManagement>
+			<plugins>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.1.0</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.0.0-M5</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.1</version>
+					<configuration>
+						<!-- put your configurations here -->
+					</configuration>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
